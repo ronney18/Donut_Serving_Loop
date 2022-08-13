@@ -10,7 +10,7 @@
 #define		SEMKEY			(key_t)978902650
 #define		MEMKEY			(key_t)978902650
 #define		NUMFLAVORS	 	4
-#define		NUMSLOTS        50
+#define		NUMSLOTS                50
 #define		NUMSEMIDS	 	3
 #define		PROD		 	0
 #define		CONSUMER	 	1
