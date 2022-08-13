@@ -1,0 +1,88 @@
+Name: Ronney Sanchez
+Date: 3/12/19
+Assignment 3
+Course: COMP3080 Operating System
+Email: Ronney_Sanchez@student.uml.edu
+
+My degree of sucess for this assignment is an 80%. I got all my producer, consumer, and utilities code to for properly. However, when I compile my code, I get a
+warning message about my "exit()" function in my program. I am getting some sort of
+an implicit declaration warning but I don't think it is nothing serious.
+
+I experimented with my program for a while. I started my program with 1 producer
+and 5 consumers with a QUEUE size of 50. When I ran my program for 5 loops a
+couple of times, I relatively get 1-2 deadlocks out of 5 loops which means I get
+3-4 successful runs. I found out that the probability of getting a deadlock is
+pretty low around 30% of the time.
+
+I then brought the QUEUE size down to 45 and my probability of getting deadlock
+went to 50%. I believe that this is the 50% mark because when I ran my program
+a couple of times again. I get 2-3 dealocks out of 5 loops. At this size, it is
+equally likely to get deadlock.
+
+The distribution of this graph over the depth of the QUEUE is almost linear
+with a slight curve. I consider using linear regression for an estimate of the
+probability.
+
+100% |  *                     CHANCES OF GETTING DEADLOCK OVER SIZE OF QUEUE
+     |      *
+     |          *
+90%  |              *
+     |                  *
+     |                      *
+80%  |                         *
+     |                            *
+70%  |                              *
+     |                                 *
+60%  |  PROBABILITY OF DEADLOCK          *
+     |                                      *
+50%  |                                        *
+     |                                           *
+40%  |                                              *
+     |                                                 *
+30%  |                                                   *
+     |                                                     *
+20%  |                                                        *
+     |                                                           *
+10%  |                                                               *
+     |--------------DEPTH OF THE QUEUE----------------------------------*-----
+0%      0       10      20      30      40      50      60      70      80
+
+I then kept my QUEUE size to 45 because I feel that it is my 50% deadlock mark
+and experimented with my number of consumers. When I increased the number of
+consumers to more than 5, I noticed that my probability of deadlocks went up 
+because there are so many consumers that only one producer cannot handle to 
+serve donuts to the consumers anymore. That is why some consumers cannot reach 
+10 dozen which locks the program.
+
+When I decreased the number of consumers to less than 5, the probability of
+deadlocks went down because there are fewer consumers to serve donuts which
+makes the producer easier to hand donuts to these consumers. There are not
+much consumers to feed.
+
+The distribution I have for this graph is linear because as number of consumers
+increase, the probability of deadlocks increase.
+
+100% |
+     |    CHANCES OF GETTING DEADLOCK OVER NUMBER OF CONSUMERS
+     |                                                                         *
+90%  |
+     |                                                                  *
+     |
+80%  |                                                          *
+     |
+70%  |                                                  *
+     |
+60%  |  PROBABILITY OF DEADLOCK                 *
+     |
+50%  |                                   *
+     |                          *
+40%  |
+     |                  *
+30%  |
+     |
+20%  |          *
+     |
+10%  |
+     |
+ 0%  ---*-----------NUMBER OF CONSUMERS------------------------------------------
+        1       2       3       4       5       6       7       8       9       10
